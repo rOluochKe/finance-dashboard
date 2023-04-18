@@ -5,6 +5,7 @@ import { themeSettings } from "@/theme"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "@/scences/navbar"
 import Dashboard from "@/scences/dashboard"
+import Predictions from "@/scences/predictions"
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), [])
@@ -19,7 +20,7 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/predictions" element={<div>predictions</div>} />
+              <Route path="/predictions" element={<Predictions />} />
             </Routes>
           </Box>
         </ThemeProvider>
